@@ -13,7 +13,7 @@ minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "n
 locale                   : "en-US"
 title                    : "PAL4AI"
 title_separator          : "-"
-subtitle                 : "Practical Ap"
+subtitle                 : "Practical Application and Learning for AI"
 name                     : &name "Parin Jhaveri & Riya Joshi" # &name is a YAML anchor which can be *referenced later
 description              : &description "Practical Application and Learning for Artifical Intelligence - Natural Language Processing (NLP), Computer Vision etc. "
 url                      : https://pal4ai.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
