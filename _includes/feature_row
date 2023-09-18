@@ -4,7 +4,7 @@
   {% assign feature_row = page.feature_row %}
 {% endif %}
 
-<div class="feature__wrapper">
+<div class="feature__wrapper" text-align="center">
 
   {% for f in feature_row %}
     <div class="feature__item{% if include.type %}--{{ include.type }}{% endif %}">
@@ -33,6 +33,15 @@
           {% if f.url %}
             <p><a href="{{ f.url | relative_url }}" class="btn {{ f.btn_class }}">{{ f.btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
           {% endif %}
+
+          {% if f.links %}
+            {% for link in f.links %}
+              {% if link.label and link.url %}
+                <a href="{{ link.url }}" rel="nofollow noopener noreferrer me"{% if link.url contains 'http' %} itemprop="sameAs"{% endif %}><i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i><span class="label">{{ link.label }}</span></a>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+
         </div>
       </div>
     </div>
